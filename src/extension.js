@@ -14,7 +14,7 @@ export default class MaximizedByDefaultExtension extends Extension {
             args = [Meta.MaximizeFlags.HORIZONTAL | Meta.MaximizeFlags.VERTICAL]
         }
 
-       this. _windowCreatedId = global.display.connect('window-created', (d, win) => {
+        this._windowCreatedId = global.display.connect('window-created', (d, win) => {
             // Only try to maximize windows that are marked to support this.
             // Other windows (e.g. dialogs) can often actually be maximized,
             // but then no longer unmaximized by the user, so we really need
